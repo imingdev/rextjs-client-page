@@ -1,3 +1,1 @@
-import Document from './dist/Document';
-
-export default Document;
+module.exports = require('./dist/Document');

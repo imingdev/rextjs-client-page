@@ -26,12 +26,7 @@ const Document = ({ body, pageScripts, pageStyles, state, helmet, context, id })
       <RenderJudge
         value={!!state}
         active={(
-          <script
-            type="text/javascript"
-        // eslint-disable-next-line
-        dangerouslySetInnerHTML={{__html: `window.${context}=${devalue(state)}`}}
-          />
-    )}
+          <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `window.${context}=${devalue(state)}` }} />)}
       />
       {pageScripts.map((src) => (<script src={src} key={src} type="text/javascript" defer />))}
       {helmet.script.toComponent()}

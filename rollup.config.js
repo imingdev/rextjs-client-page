@@ -12,7 +12,8 @@ export default glob.sync('./src/*.{js,jsx}').map((input) => {
     input,
     output: {
       file: `dist/${fileName.replace(extname(fileName), '.js')}`,
-      format: 'esm'
+      format: 'cjs',
+      exports: 'auto'
     },
     plugins: [
       // 支持第三方模块

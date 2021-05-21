@@ -1,3 +1,1 @@
-import Error from './dist/Error';
-
-export default Error;
+module.exports = require('./dist/Error');
